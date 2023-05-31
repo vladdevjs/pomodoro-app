@@ -1,9 +1,13 @@
 .button {
   margin-top: 20px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--button-color);
   border: none;
   display: inline-block;
   width: 100px;
   cursor: pointer;
+}
+
+.settings-button svg {
+  color: var(--text-color);
 }

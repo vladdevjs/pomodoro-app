@@ -1,12 +1,13 @@
 body {
-  background-color: #30384b;
+  background-color: var(--background-color);
 }
 
 .page {
   height: 100vh;
-  background-color: #30384b;
-  color: #eee;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
+  transition: background-color 0.5s;
 
   font-family: 'Inter', Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;

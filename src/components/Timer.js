@@ -4,6 +4,7 @@ import PauseButton from './PauseButton';
 import SettingsButton from './SettingsButton.js';
 import 'react-circular-progressbar/dist/styles.css';
 import { useContext, useState, useEffect, useRef } from 'react';
+import useNotification from '../hooks/useNotification.js';
 import SettingsContext from '../contexts/SettingsContext';
 import bell from '../sounds/bell.mp3';
 
@@ -12,12 +13,12 @@ function Timer() {
   const [isPaused, setIsPaused] = useState(true);
   const [mode, setMode] = useState('work');
   const [secondsLeft, setSecondsLeft] = useState(0);
+  const { showNotification } = useNotification();
 
   const secondsLeftRef = useRef(secondsLeft);
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
   const audio = new Audio(bell);
-
   const playSound = (sound) => sound.play();
   function switchMode() {
     const nextMode = modeRef.current === 'work' ? 'break' : 'work';
@@ -41,6 +42,12 @@ function Timer() {
   }
 
   useEffect(() => {
+    if ('Notification' in window && Notification.permission !== 'denied') {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  useEffect(() => {
     initTimer();
     const interval = setInterval(() => {
       if (isPausedRef.current) {
@@ -48,6 +55,9 @@ function Timer() {
       }
       if (secondsLeftRef.current === 0) {
         playSound(audio);
+        showNotification('Pomodoro App', {
+          body: `Сессия ${modeRef.current} закончилась`,
+        });
         return switchMode();
       }
       tick();
@@ -72,7 +82,7 @@ function Timer() {
         text={`${minutes}:${seconds}`}
         styles={buildStyles({
           pathColor: mode === 'work' ? '#f54e4e' : '#4aec8c',
-          textColor: '#fff',
+          textColor: 'var(--text-color)',
           tailColor: '#rgba(255, 255, 255, .2)',
         })}
       />
@@ -94,7 +104,11 @@ function Timer() {
         )}
       </div>
 
-      <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
+      <SettingsButton
+        onClick={() => {
+          settingsInfo.setShowSettings(true);
+        }}
+      />
     </div>
   );
 }

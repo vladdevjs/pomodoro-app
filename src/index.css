@@ -1,8 +1,10 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/fonts/fonts.css');
+@import url('./blocks/variables/variables.css');
 @import url('./blocks/page/page.css');
 @import url('./blocks/container/container.css');
 @import url('./blocks/button/button.css');
 @import url('./blocks/settings-button/settings-button.css');
 @import url('./blocks/settings/settings.css');
+@import url('./blocks/toggler/toggler.css');
 @import url('./blocks/slider/slider.css');

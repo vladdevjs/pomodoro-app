@@ -1,0 +1,51 @@
+.toggler {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.toggler__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.toggler__container {
+  position: relative;
+}
+
+.toggler__input {
+  appearance: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.toggler__input:checked {
+  background-color: rgb(53, 65, 103);
+}
+
+.toggler__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--toggler-color);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.toggler__slider svg {
+  color: var(--toggler-text-color);
+}
+
+.toggler__input:checked + .toggler__slider {
+  transform: translateX(59px);
+  background-color: #30384b;
+}

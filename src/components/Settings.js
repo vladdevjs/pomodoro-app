@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ReactSlider from 'react-slider';
 import SettingsContext from '../contexts/SettingsContext';
+import Toggler from './Toggler';
 import BackButton from './BackButton';
 
 function Settings() {
@@ -33,6 +34,7 @@ function Settings() {
           localStorage.setItem('break', newValue);
         }}
       />
+      <Toggler />
       <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
     </div>
   );

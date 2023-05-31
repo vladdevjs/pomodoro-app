@@ -12,12 +12,17 @@ function App() {
     ? Number(localStorage.getItem('break'))
     : 15;
 
+  const lightThemeInitial = localStorage.getItem('theme')
+    ? localStorage.getItem('theme') === 'true'
+    : false;
+
   const [showSettings, setShowSettings] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(workInitial);
   const [breakMinutes, setBreakMinutes] = useState(breakInitial);
+  const [lightTheme, setLightTheme] = useState(lightThemeInitial);
 
   return (
-    <main className="page">
+    <main className={`page${lightTheme ? ' light-theme' : ''}`}>
       <div className="container">
         <SettingsContext.Provider
           value={{
@@ -27,6 +32,8 @@ function App() {
             breakMinutes,
             setWorkMinutes,
             setBreakMinutes,
+            lightTheme,
+            setLightTheme,
           }}
         >
           {showSettings ? <Settings /> : <Timer />}
