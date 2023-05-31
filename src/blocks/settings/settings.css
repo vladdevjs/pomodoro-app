@@ -1,0 +1,8 @@
+.settings {
+  text-align: left;
+}
+
+.settings label {
+  display: block;
+  margin: 20px auto 10px;
+}

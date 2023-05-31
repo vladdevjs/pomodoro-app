@@ -1,0 +1,9 @@
+.button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+}
