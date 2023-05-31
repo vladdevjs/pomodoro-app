@@ -14,7 +14,7 @@ function Settings() {
         trackClassName={'track'}
         value={settingsInfo.workMinutes}
         min={1}
-        max={120}
+        max={90}
         onChange={(newValue) => {
           settingsInfo.setWorkMinutes(newValue);
           localStorage.setItem('work', newValue);
