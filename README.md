@@ -11,3 +11,5 @@
 В папке проекта запустить можно с помощью
 
 ### `npm start`
+
+Проект развернут на Netlify [Смотреть демо](https://sparkly-croissant-efb4ee.netlify.app/)
