@@ -45,6 +45,10 @@
   color: var(--toggler-text-color);
 }
 
+.toggler__input:focus {
+  outline: none;
+}
+
 .toggler__input:checked + .toggler__slider {
   transform: translateX(59px);
   background-color: #30384b;
