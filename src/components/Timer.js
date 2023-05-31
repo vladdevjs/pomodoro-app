@@ -63,6 +63,7 @@ function Timer() {
       tick();
     }, 1000);
     return () => clearInterval(interval);
+    //eslint-disable-next-line
   }, [settingsInfo]);
 
   const totalSeconds =
