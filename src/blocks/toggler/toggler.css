@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
-}
-
-.toggler__container {
   position: relative;
 }
+
+/* .toggler__container {
+  position: relative;
+} */
 
 .toggler__input {
   appearance: none;
@@ -29,6 +30,10 @@
   background-color: rgb(53, 65, 103);
 }
 
+.toggler__input:focus {
+  outline: none;
+}
+
 .toggler__slider {
   position: absolute;
   top: 0;
@@ -39,14 +44,11 @@
   background-color: var(--toggler-color);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
+  overflow: hidden;
 }
 
 .toggler__slider svg {
   color: var(--toggler-text-color);
-}
-
-.toggler__input:focus {
-  outline: none;
 }
 
 .toggler__input:checked + .toggler__slider {

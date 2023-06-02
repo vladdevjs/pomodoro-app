@@ -1,15 +1,15 @@
 # Simple Pomodoro React App
 
-Небольшой пет-проект в виде таймера техники Pomodoro на основе React.js
+A small pet project in the form of a Pomodoro timer based on React.js.
 
-Основной функционал:
+Main functionality:
 
-- Настройка продолжительности рабочей сессии и отдыха
-- Сохранение настроек в LocalStorage, чтобы при перезагрузке страницы не сбрасывались
-- По завершении сессии воспроизводится звуковой сигнал
+- Configuration of work session and break duration
+- Saving settings in LocalStorage to preserve them after page reload
+- Playing a sound signal upon session completion
 
-В папке проекта запустить можно с помощью
+To run the project in the project folder, use:
 
 ### `npm start`
 
-Проект развернут на Netlify [Смотреть демо](https://sparkly-croissant-efb4ee.netlify.app/)
+The project is deployed on Netlify. [See the demo](https://sparkly-croissant-efb4ee.netlify.app/)

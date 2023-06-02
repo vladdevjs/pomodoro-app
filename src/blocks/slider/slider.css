@@ -13,6 +13,10 @@
   outline: none;
 }
 
+/* .thumb:active {
+  outline: none;
+} */
+
 .slider.green {
   border: 2px solid #4aec8c;
 }
