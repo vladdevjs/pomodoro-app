@@ -2,7 +2,7 @@
 
 A small pet project in the form of a Pomodoro timer based on React.js.
 
- functionality:
+Main functionality:
 
 - Configuration of work session and break duration
 - Saving settings in LocalStorage to preserve them after page reload
