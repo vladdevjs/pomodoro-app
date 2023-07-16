@@ -29,4 +29,4 @@ Functionality:
 
 ## 🔗 Link
 
-[Demo on Netlify](https://sparkly-croissant-efb4ee.netlify.app/)
+[Demo on Netlify](https://pomidorki.netlify.app/)
