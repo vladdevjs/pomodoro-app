@@ -2,6 +2,8 @@
 
 [![Status - project completed](https://img.shields.io/badge/Status-project_completed-2ea44f)](https://)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/24ce9ce6-6295-491f-8860-bbfa8df71c2e/deploy-status)](https://app.netlify.com/sites/pomidorki/deploys)
+
 ## 📰 Project Description:
 
 **Objective:** Develop a Pomodoro timer with the ability to customize the theme, work and break intervals.
